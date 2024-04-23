@@ -1,0 +1,36 @@
+.catalog-container {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.cards-container {
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.catalog-card {
+  height: 320px;
+  width: 220px;
+  cursor: pointer;
+}
+
+.item-name {
+  text-align: center;
+}
+
+.item-image {
+  scale: .8;
+}
+
+.strike-price {
+  color: red;
+}
+
+.price {
+  text-align: center;
+}
+

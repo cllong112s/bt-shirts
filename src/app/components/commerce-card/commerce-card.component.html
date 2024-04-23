@@ -1,0 +1,43 @@
+<div class="commerce-card">
+  <h2 class="card-title">{{this.data.item.name}}</h2>
+  <div class="content-container">
+    <img class="item-image" src="assets/tShirt.jpg">
+    <div class="selections-container">
+      <div class="color-selector">Color
+        <div class="color" id={{color}} *ngFor="let color of this.data.item.colorsAvailable" style="background-color:{{color}}" (click)="selectColor(color)"></div>
+      </div>
+      <div class="size-selector">Size
+        <div id="S" (click)="selectSize('S')" class="size">S</div>
+        <div id="M" (click)="selectSize('M')" class="size">M</div>
+        <div id="L" (click)="selectSize('L')" class="size">L</div>
+        <div id="XL" (click)="selectSize('XL')" class="size">XL</div>
+      </div>
+      <div class="quantity-selection-container">Quantity
+        <mat-form-field class="quantity-selector">
+          <mat-select  [(ngModel)]="quantity">
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4</mat-option>
+            <mat-option value="5">5</mat-option>
+            <mat-option value="6">6</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="price">${{(this.data.item.price * +quantity).toString().slice(0,5)}}</div>
+    </div>
+  </div>
+
+  <div class="options">
+    <button class="option" mat-raised-button color="primary"
+            [disabled]="!this.currentSizeSelection || !this.currentColorSelection"
+            (click)="checkout()">
+      Checkout
+    </button>
+    <button class="option" mat-raised-button color="primary"
+            [disabled]="!this.currentSizeSelection || !this.currentColorSelection"
+            (click)="addToCart()">
+      Add To Cart
+    </button>
+  </div>
+</div>

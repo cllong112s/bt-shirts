@@ -1,0 +1,114 @@
+.header {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black solid 2px;
+}
+
+.logo-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.selected-button {
+  text-decoration: underline;
+}
+
+.logo {
+  scale: .6;
+}
+
+.company-name {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-and-cart-container {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.nav-container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-button {
+}
+
+.cart-indicator {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-svg {
+  cursor: pointer;
+}
+
+.number-of-items-indicator {
+  margin-left: 4px;
+}
+
+.menu-nav-buttons {
+  display: flex;
+  width: 180px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-nav-button {
+  background-color: white !important;
+  border-radius: 0px !important;
+  width: 100%;
+  height: 60px;
+}
+
+.menu {
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  scale: 2;
+}
+
+@media screen and (max-width: 780px) {
+  .nav-container {
+    display: none;
+  }
+
+  .menu-nav-buttons {
+    position: absolute;
+    margin-top: 78px;
+    background-color: white;
+    z-index: 999;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .company-name {
+    font-size: 24px;
+  }
+
+  .logo-container {
+    padding-left: 15px;
+  }
+}

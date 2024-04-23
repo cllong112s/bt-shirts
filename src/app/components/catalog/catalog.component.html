@@ -1,0 +1,14 @@
+<div class="catalog-container">
+  <div class="cards-container">
+    <mat-card *ngFor="let item of catalogItems" class="catalog-card" (click)="openCommerceCard(item)">
+      <h3 class="item-name">{{item.name}}</h3>
+      <img class="item-image" src="assets/card-shirt.png">
+      <div class="price" *ngIf="!item.salePrice">${{item.price}}</div>
+      <div class="price" *ngIf="item.salePrice">
+        <s class="strike-price">${{item.price}}</s>
+        <br>
+        ${{item.salePrice}}
+      </div>
+    </mat-card>
+  </div>
+</div>
